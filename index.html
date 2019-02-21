@@ -19,35 +19,64 @@
 		margin:0;
 		padding:0;
 		}
-	table, tr, th, td {
-		border: none !important; 
-		padding: 0!important;	
-		}
-	table td{
-		border-collapse:collapse;
-		}
+	/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+.group :first-child{ border-left:1px solid #FFF; padding-left: 0%;}
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%;}
+.span_2_of_3 { width: 66.13%;}
+.span_1_of_3 { width: 30%; border-left:1px solid #000; padding-left: 2.16%;}
+.span_1_of_3 img { float: left; }
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
 	</style>
 </head>
-	<body style="width:100% !important;-webkit-text-size-adjust:none;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;-webkit-font-smoothing:antialiased;background-color:white;font-family: sans-serif;" >
-		
-		<table width="500" bgcolor="white" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:auto;margin-left:0px;margin-top:10px;border-style:none !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;" >
-			<tr>
-				<td valign="top" style="border-style:none;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0px !important;border-collapse:collapse;border-right:1px solid #000 !important;vertical-align: middle">
-					<img src="logo.png" style="vertical-align: middle">
-					<strong style="display: inline-block;vertical-align: middle;">Cathal Ginley<br>
-					Pricipal<br></strong>
-				</td>
-				<td valign="top" style="border-style:none;padding-top:5px !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:20px !important;border-collapse:collapse;border-right:1px solid #000 !important;">
-					<span style="display: inline-block;vertical-align: middle;"><strong>Allied Real Estate Group</strong><br>
-					68 Fitzwilliam Sq<br>
-					Dublin 2<br></span>
-				</td>
-				<td valign="top" style="border-style:none !important;padding-top:5px !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:20px !important;border-collapse:collapse;">
-					<span style="display: inline-block;vertical-align: middle;">d. +353 1 244 9668<br>
-					m. +353 85 657 2348<br>
-					e. mcginley@areg.ie</span>
-				</td>
-			</tr>
-		</table>
+	<body>
+	<div class="section group">
+	<div class="col span_1_of_3">
+	<img src="logo.png">
+	 <strong>
+	 Cathal Ginley
+	 <br>
+	 Pricipal
+	</strong>
+	</div>
+	<div class="col span_1_of_3">
+	Allied Real Estate Group
+	<br>
+	68 Fitzwilliam Sq
+	<br>
+	Dublin 2
+	</div>
+	<div class="col span_1_of_3">
+	d. +353 1 244 9668
+	<br>
+	m. +353 85 657 2348
+	<br>
+	e. mcginley@areg.ie
+	</div>
+</div>
 	</body>
 </html>
