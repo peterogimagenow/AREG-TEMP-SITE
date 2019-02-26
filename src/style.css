@@ -1,0 +1,24 @@
+button.cta{
+  background-color: #f74b1c;
+  border: none;
+  color: white;
+  padding: 1em 4em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4em 2em;
+  border-radius: 2em;
+  outline:none;
+  text-transform:uppercase;
+}
+button.cta:hover{
+background-color: #FFFFFF;
+color: #f74b1c;
+}
+.section{
+  text-align:center;
+}
+#section1{
+  padding: 0 10em;
+}
